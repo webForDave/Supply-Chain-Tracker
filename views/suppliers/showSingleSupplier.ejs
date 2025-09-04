@@ -1,0 +1,11 @@
+<h1>Supplier Detail</h1>
+<a href="/">Home</a> | <a href="/suppliers/s/<%= supplier.name%>/edit">Edit</a>
+<form action="/suppliers/s/<%= supplier.name%>/delete?_method=DELETE" method="post">
+    <button type="submit">Delete</button>
+</form>
+<p><%= supplier.name %></p>
+<p><%= supplier.contactInfo %></p>
+<p><%= supplier.location %></p>
+<% if (supplier.notes) {%>
+    <p>Notes: <%= supplier.notes %></p>
+<%}%>

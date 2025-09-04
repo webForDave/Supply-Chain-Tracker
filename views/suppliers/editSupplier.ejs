@@ -1,0 +1,20 @@
+<h1>Modify Supplier detail</h1>
+<form action="/suppliers/s/<%= supplier.name%>/update?_method=PUT" method="post">
+    <div>
+        <label for="name">Name</label>
+        <input type="text" name="name" value="<%= supplier.name %>" required>
+    </div>
+    <div>
+        <label for="contactInfo">Contact Info</label>
+        <input type="email" name="contactInfo" value="<%= supplier.contactInfo %>" required>
+    </div>
+    <div>
+        <label for="location">Location</label>
+        <input type="text" name="location" value="<%= supplier.location %>">
+    </div>
+    <div>
+        <label for="notes">Notes</label>
+        <textarea name="notes" cols="40" rows="8"><%= supplier.notes %></textarea>
+    </div>
+    <button type="submit">Submit</button>
+</form>
